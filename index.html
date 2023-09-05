@@ -30,6 +30,10 @@
          Pourquoi la validation est-elle une étape importante? il existe toutes sortes d'utilisateurs, que ce soit des personnes inexpérimentées qui peuvent saisir des données, ou d'autres plus expériementées qui peuvent être malveillantes et compromettre la sécurité de l'application ou de la base de données. <br>
         La validation consiste à vérifier que les réponses données soient conformes à celles attendues et puyissent étre affectées à vos entités en BDD (Base de données) avec toutes les garanties. Alors, quels outils doit-on utiliser pour la validation avec Symfony ? Exixte-t-il plusieurs façons de procéder ? Concrètement, comment s'y prendre ? C'est ce que nous analuserons ensemble dans ce cours.
       </p>
+      <h2>La validation à partir de l'entité</h2>
+      <p>
+        Les entités sont des éléments importants de Symfony, car l'ORM (Object-Relational-Mapping) du framework se base sur celles-ci pour construire la base de données. Une entité peut par exemple représenter une table, ses propriétés, ses champs ou encore ses attributs. Ainsi chaque saisie représente généralement un objet qui sera stocké dans la base de données. C'est pourquoi il est approprié de placer les contraintes de validation dans les entités.
+      </p>
     </div>
   </div>
 </main>
