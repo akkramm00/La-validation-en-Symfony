@@ -49,6 +49,7 @@
         En utilisannt  "doctrine/annotations" , nous pouvons   jouter des informations à notre code sans avoir à écrire de code supplémentaire ou à configurer des fichiers externes. Ce qui est important de comprendre c'est que , sous le terme "  annotations" , Symfony inclut le système d'annotations , amis également les attributs qui ont été introduits depuis PHP 8, car ces métadonnées sont natives à PHP.
       </p>
       <h2>Importer un namespace</h2>
+      <p>
       Ensuite , on importe un namespace en utilsant lla commande suivante:
       <br><br>
 
@@ -56,6 +57,10 @@
       <br><br>
 
       Grace à cet import, on peut accéder aux classe utilisant Assert. Par exemple, au lieu de devoir écrire "new Symfony\Component\Validator\Constraints\NotBlank()", on écrira "new Assert\NotBlank()". La classe "Constraints", qui utilise l'alias Assert, nous permettra ainsi d'ajouter des contraintes de validation.
+      </p>
+      <h2>Les contraintes de validation  </h2>
+      p  
+      Les contraintes de validation sont utilisées pour vérifier la validité des données entrées dans une entitédans le codre d'un formyulaire. Elles permettent de controler l'entité elle-meme ainsi que ses variables, qui sont représentées par les champs de saisie. Symfony offre de nombreuses contraintes de base, mais il est également posible d'importer des contraintes supplémentaires à partir de paquets tiers ou de créer ses propres contarintres personnalisées.
     </div>
   </div>
 </main>
