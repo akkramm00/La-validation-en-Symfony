@@ -25,7 +25,10 @@
 <h1 class="my-3">La Validation en Symfony</h1>
       <p>
         Afin de dialoguer avec les utilisateurs, il est nécessaire d'utiliser les formulaires. Ceux qui permettent de pouvoir s'authentifier , répondre à des questionnaires et bien d'autre chose. <br>
-        Avec Symfony, ilexiste deux façons de créer un formulaire.Soit à partir d'une classe FormType gébérée en amont (notamment via le makerBundle), ou directement via le formubuilder accessible dans un controller; soit à partir d'une classe FormType généré en amont (via makerBundle) ou directement via le formBuilder accessible dans un contoleur.
+        Avec Symfony, il existe deux façons de créer un formulaire.Soit à partir d'une classe FormType gébérée en amont (notamment via le makerBundle), ou directement via le formubuilder accessible dans un controller; soit à partir d'une classe FormType généré en amont (via makerBundle) ou directement via le formBuilder accessible dans un contoleur. <br>
+        Après quoi, il faudra que le controlleur retourne le formulaire à la vue Vue(Modèle-Vue-Controller), paeexemple dans un fichier Twig afin qu'il puisse étre visualisé, rempli, soumi par l'utilisateur puis validé par mle controleur. Ainsi, avant même de comprendre ce qu'est la validation avec Symfony, qui est le thème de ce cours, il vous faudra avoir acquis ces quelques notions sur les formulaires. <br>
+         Pourquoi la validation est-elle une étape importante? il existe toutes sortes d'utilisateurs, que ce soit des personnes inexpérimentées qui peuvent saisir des données, ou d'autres plus expériementées qui peuvent être malveillantes et compromettre la sécurité de l'application ou de la base de données. <br>
+        La validation consiste à vérifier que les réponses données soient conformes à celles attendues et puyissent étre affectées à vos entités en BDD (Base de données) avec toutes les garanties. Alors, quels outils doit-on utiliser pour la validation avec Symfony ? Exixte-t-il plusieurs façons de procéder ? Concrètement, comment s'y prendre ? C'est ce que nous analuserons ensemble dans ce cours.
       </p>
     </div>
   </div>
