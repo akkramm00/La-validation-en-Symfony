@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Validation du formulaire</title>
+  <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header class="container-fluid">
+  <div class="row">
+    <div class="col navbar bg-dark text-with py-3 d-flex justify-content-around align-items-center">
+      <a href="index.html">introduction</a>
+      <a href="Constraints.html">constraintsPHP</a>
+      <a href="Essentiel.html">Essentiel</a>
+    </div>
+  </div>
+</header>
+<main class="container">
+  <div class="row">
+    <div class="col">
+<h1 class="my-3">L'essentiel de la validation</h1>
+      <p>
+        Avoir un formyulaire c'est bien , mais il faut aussi veiller à ce qui peut y être saisi. La fameuse devise "Never Trust user Input", qui signifie ne jamais faire confiance à un un utilisateur, ne doit jamais être oublier par un développeur. En effet, que ce soit à cause d'une mauvaise utilisation ou par malveillance délibérée, un utilisateur peut entrer dans un formulaire des données non utilisables , ou pire , ouvrir une faille de sécurité. <br>
+        C'est pour cela que des outils de validation ont été créées. Symfony fournit Validator, qui est simple d'inbstallation et d'utilisation. <br>
+        Il 'est important de savoir qu'il exixte de nombreuses contraintes de validation disponibles. La plupart de ces contraintes ont été présentés dans ce cours, et peuvent être configurées avec différentes options. Par exemple , l'option "message" est applicable à presque toutes les contraintes , mais il existe d'autres options spécifiques à chaque contrainte. <br>
+        Il y'a deux façons d'utiliser les contraintes : En les ajoutant directement à l'entité ou enles définissant dans un fichier PHP qui contient le formulaire. Dans tous les cas, il est important de choisir une méthode et de ne pas écrire les contraintes dans les deux endroits pour éviter les conflits ou les erreurs de validation. <br>
+        La validation  vous posera peut etre quelques problèmes au début, surtout quand il faut parfois choisir son système d'écriture et faire des conversions entre annotations , Attributs ou PHP, mais vous vous ferez vite et vous pourrez traiter ainsi touttes les données de manière sécuriséer.
+        
+      </p>
+  </div>
+  </div>
+</main>
+
+
+  
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
