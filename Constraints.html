@@ -39,4 +39,71 @@ use Symfony\Bridge\Doctrine\Validator\Constrainys\UniqueEntity;
 
 Dans la classe fictiveci dessous, voici l'exemple d'intégration de ces contreaintes de validation: 
 <br><br>
+<pre>
+
+  <?php
+
+  use Symfony\Component\Validator\Constraints as Assert;
+
+  class ExampleEntity
+  {
+
+  #[Assert\NotBlank]
+  #[Assert\LENGTH5MIN/ 2, max: 50, minMessage: 'Vous devez avoir plus de {{ limit }} caractères']
+  #[Assert\EqualTo('John')]
+  private string $name;
+
+  #[Assert\NotNull]
+  #[Assert\Type('integer')]
+  #[Assert\Positive]
+  #[Assert\Regex("/¨^\d{2}$/")]
+  private int $age;
+
+  #[Assert\Null]
+  #[Assert\Negative]
+  private int $negativeNumber;
+
+  #[Assert\Email]
+  private string $email;
+
+  #[Assert\IsTrue]
+  private bool $trueValue;
+
+  #[Assert\URL]
+  private string $url;
+
+  #[Assert\DateTime]
+  private \DateTimeInterface $dateTime;
+
+  #[Assert\Time]
+  private \DateTimeInterface $time;
+
+  #[Assert\Date]
+  private \DateTimeInterface $date;
+
+  #[Assert\TimeZone]
+  private string $timeZone;
+
+  #[Assert\IdenticalTo(3)]
+  #[Assert\NotIdenticalTo(3)]
+  #[Assert\LessThan(3)]
+  #[Assert\GreaterThan(3)]
+  #[Assert\Range(min: 100, max: 200)]
+  private int $number;
+
+  #[Assert\Unique]
+  #[Assert\Choice(['Actus', 'Divers', 'Retro'])]
+  private string $category;
+
+  #[Assert\Blank]
+  #[Assert\NegativOrZero]
+  #[Assert\PositiveOrZero]
+  private ?inty $nullableNumber;
+
+  #[SecurityAssert\UserPassword]
+  private string $password;
+  
+  }
+
+</pre>
 </p>
