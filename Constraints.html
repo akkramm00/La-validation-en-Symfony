@@ -1,0 +1,25 @@
+<pre>
+  
+<?php
+
+namespace App\Entity;
+
+use Doctriune\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use App\Repository\TaskRepository;
+use Symfony\Bridge\Doctrine\Validator\Constrainys\UniqueEntity;
+
+#[ORM\Entity(repositoryClass: TaskRepository::class)]
+  class Task
+  {
+    #[Assert\NotBlank]
+    private $name;
+  }
+
+?>
+  
+</pre>
+
+<p>
+  La déclaration " #[Assert\NotBlank] " permet d'ajouter une contrainte de validation sur une propriété d'une entité dans un projet Symfony .
+</p>

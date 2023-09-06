@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col navbar bg-dark text-with py-3 d-flex justify-content-around align-items-center">
       <a href="index.html">introduction</a>
-      <a href=""></a>
+      <a href="Constraints.html">constraintsPHP</a>
       <a href=""></a>
     </div>
   </div>
@@ -46,17 +46,18 @@
         Cela signifie que nous pouvons utiliser les fonctionnalittés et les classes de ces packages dans notre projet . Symfony/validator
  permet de définir les annotations dans le code  pour l'utilisation avec l'ORM Doctrine.
         <br>
-        En utilisannt  "doctrine/annotations" , nous pouvons   jouter des informations à notre code sans avoir à écrire de code supplémentaire ou à configurer des fichiers externes. Ce qui est important de comprendre c'est que , sous le terme "  annotations" , Symfony inclut le système d'annotations , amis également les attributs qui ont été introduits depuis PHP 8, car ces métadonnées sont natives à PHP.
+        En utilisannt  "doctrine/annotations" , nous pouvons   jouter des informations à notre code sans avoir à écrire de code supplémentaire ou à configurer des fichiers externes. Ce qui est important de comprendre c'est que , sous le terme "  annotations" , Symfony inclut le système d'annotations , mais également les attributs qui ont été introduits depuis PHP 8, car ces métadonnées sont natives à PHP. <br>
+        Ainsi , nous n'utilisons que des attributs de "PHP attributs" dans ce cours.
       </p>
       <h2>Importer un namespace</h2>
       <p>
-      Ensuite , on importe un namespace en utilsant lla commande suivante:
+      Ensuite , on importe un namespace en utilsant la commande suivante:
       <br><br>
 
       $ use Symfony\Component\validator\Constraints as Assert;
       <br><br>
 
-      Grace à cet import, on peut accéder aux classe utilisant Assert. Par exemple, au lieu de devoir écrire "new Symfony\Component\Validator\Constraints\NotBlank()", on écrira "new Assert\NotBlank()". La classe "Constraints", qui utilise l'alias Assert, nous permettra ainsi d'ajouter des contraintes de validation.
+      Grace à cet import, on peut accéder aux classe utilisant Assert. Par exemple, au lieu de devoir écrire "new Symfony\Component\Validator\Constraints\NotBlank()", on écrira "new Assert\NotBlank()". La classe "Constraints", qui utilise l'alias Assert, nous permettra ainsi d'ajouter des contraintes de validation. (voir fichier Constraints.php)
       </p>
       <h2>Les contraintes de validation  </h2>
       p  
