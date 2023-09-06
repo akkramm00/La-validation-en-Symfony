@@ -96,6 +96,27 @@
       </p>
 
       <h2>Autres contrainte de validation</h2>
+      <span>Voir documentation officielle de Symfony</span>
+      <br>
+      <h2>Validation dans un fichier Twig</h2>
+    <p>
+      Bien que Twig ne soit pas un outil de validationde formulaire, il peut etre utilisé pour ajouter des contraintes de validation dans les formulaires générés à partir de templates. Pour cela, Twig fournit des filtres et des fonctions qui peuvent etre utilisées pour validee les données saisies par l'utilisateur.
+    </p>
+      <h2>Exemplede validation Twig</h2>
+      <br>
+      
+      <ul>
+        <li> Length => {{ username|length<= 10 }}</li>
+        <li> range => {{ age|range(18, 99 ) }}</li>
+        <li> number_format => {{ price|number_format(2, '.', ',') }}</li>
+        <li> date => {{ date(date_format='Y-m-d') }}</li>
+      </ul>
+      <br>
+      <p>
+        Il est egalement possible d'utiliser des extensions Twig pour ajouter des contraintes de validation plus avancées, telles que des contraintes de type , de format ou de contenu .
+        <br>
+         En résumé, Twig ne fournit pas de fonctionnalités de validation de formulaire intégrés, mais il offre des filtres, des fonctions et des extensions qui peuvent être utilsés pour ajouter des contraintes de validation dans les formulaires générés à partir de templates.
+      </p>
     </div>
   </div>
 </main>
