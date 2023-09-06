@@ -73,6 +73,29 @@
          voir exemple  dans "Constraints.html" .
         
       </p>
+      <h2>Validation dans le controleur.</h2>
+      <p>
+        Maintenant, comment le controller traite-t-il la validation du formulaire après soumission de celui-ci par l'utilisateur. <br>
+        En général, si un formulaire est associé à une entité(data_type) nous plaçons les contraintes directement dans l'entité. <br>
+        Si le formulaire n'est pas associé à une entité, on aura tendance à effectier celles-ci directement dans le builder du formType. <br>
+         SensioLabs préconise pour la version 5.4 de son framework d'utiliser la condition ci-dessous :br  <br>
+
+        <pre>
+          iif ($form->isSubmitted() && $form->isValid())
+ {
+          $userRepository->save($user, true);
+          return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
+ }       
+        
+        </pre>
+
+      Pour débugger les contraintes , il existe cette ligne de commande qui peut vous etre très utile: <br><br>
+
+      $ php bin/console debug:validator 'app\Entity\nom_entité'
+      
+      </p>
+
+      <h2>Autres contrainte de validation</h2>
     </div>
   </div>
 </main>
