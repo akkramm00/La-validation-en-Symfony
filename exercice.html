@@ -33,6 +33,37 @@
           <li>Password avec une contrainte qui vérifie que le mot de passe n'est pas compromis et une autre de longueur fixée avec un minimum de 8.</li>
         </ul>
       </p>
+      <br><br>
+      <pre>
+        public function buildForm(FormBuildInterface $builder, array $options): void
+        {
+        $builder
+           ->add(Email, EmailType::class, [
+                'constraints' => [
+                   new Email([
+                       'message' => "cet addresse mail n'est pas valide"
+                   ])
+                ]
+           ])
+          -> add('username', TextType::class, [
+               'constraints' => {
+                   new Length([
+                      'min' => 3,
+                      'minMessage' => '>Vous devez rentrer au moins {{ limùit }} caractères'
+                   ])
+                 }
+          ])
+         ->add('password', PasswordType::class, [
+              'constraints' => [
+                  new NotComprised¨Password(),
+                  new Length([
+                      'min' => 8,
+                      'minMessage' => 'Vous devez rentrez au moins {{ limit }} caractères'
+                  ])
+              ]
+         ])
+        };
+      </pre>
     </div>
   </div>
 </main>
