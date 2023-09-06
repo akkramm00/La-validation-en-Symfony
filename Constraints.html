@@ -21,5 +21,22 @@ use Symfony\Bridge\Doctrine\Validator\Constrainys\UniqueEntity;
 </pre>
 
 <p>
-  La déclaration " #[Assert\NotBlank] " permet d'ajouter une contrainte de validation sur une propriété d'une entité dans un projet Symfony .
+  La déclaration " #[Assert\NotBlank] " permet d'ajouter une contrainte de validation sur une propriété d'une entité dans un projet Symfony . <br>
+  Il est possible , au lieu de rajouter des contraintes directement sur l'entité, de les mettre à part dans un fichier  YAML ou XML dans le dossier "config". <br>
+  Exemple: <br><br>
+<pre>
+  
+  # config/validateor/validation.yaml
+   App\Entity\Task:
+    properties:
+       name:
+         - NotBlank: ~
+  
+</pre>
+  
+
+  
+
+  
+  
 </p>
