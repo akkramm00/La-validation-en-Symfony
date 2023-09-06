@@ -25,7 +25,7 @@
     <div class="col">
       <h2>Ennoncé</h2>
       <p>Vous êtes un developpeur junior dans une agence web. on vous confie à vous ainsi qu'à un autre développeur junior, un projet Symfony 5.4 ou il est nécessaire de refaire tous les formulaires , en y incluant des contraintes de validation. <br>
-        <h4>Question</h4>
+        <h4>Question n°1 </h4>
         Pour commencer, vous devez créer dans un fichier PHP un formulaire d'enregistrement dans lequel il y'aura 3 champs: 
         <ul>
           <li>Email avec une contrainte email et un message.</li>
@@ -34,6 +34,7 @@
         </ul>
       </p>
       <br><br>
+      <h4>Response n° 1</h4>
       <pre>
         public function buildForm(FormBuildInterface $builder, array $options): void
         {
@@ -63,6 +64,52 @@
               ]
          ])
         };
+      </pre>
+      <br>
+      <h4>Question n°2 </h4>
+      <p>
+        Votre collègue ,nouveau dans le domainedu développement, a des difficultés pour effectuer certaines manipulation. D'ailleurs, il ne parvient pas à convertir deux contraintes de validation d'une entité en contraite de validation pour un fichier PHP. Aidez-le à convertir ces mêmes contraintes . <br>
+
+        Les contraintes sont :
+        <pre>
+          /**
+             * @Assert\NotNull
+             *@Assert\Type(type="bool")
+             */
+            private $flag;
+
+          /**
+             * @Assert\NotEqualTo(value=0)
+             *@Assert\LessYhan(value=10000)
+             */
+          private $number;
+        </pre>
+      </p>
+
+      <h4>Response n° 2</h4>
+      <br>
+
+      <pre>
+
+        $builder
+          ->add('flag', checkboxType::class, [
+              'constraints' => [
+                 new NotNull(),
+                 new Type([
+                    'type' => 'bool',
+                 ])
+              ]
+          ])
+          ->add('number', IntegerType::class, [
+              'constraints' => [
+                 new NotEqualTo([
+                     'value' => 0,
+                 ])
+                 new LessThan([
+                     'value' => 10000,
+                 ])
+              ]
+          ])
       </pre>
     </div>
   </div>
