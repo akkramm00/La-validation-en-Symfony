@@ -106,4 +106,18 @@ Dans la classe fictiveci dessous, voici l'exemple d'intégration de ces contreai
   }
 
 </pre>
+
+Autre exemple, le tableau est défini dans la constante "const" et est utilisé par choices :
+
+<pre>
+
+  class Task
+  {
+  const CATEGORY = ['Actus', 'Divers', 'Retro']
+  
+  #[Assert\choice(choices: CATEGORY)]
+  protected $category;
+  }
+</pre>
+
 </p>
