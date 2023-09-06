@@ -121,3 +121,44 @@ Autre exemple, le tableau est défini dans la constante "const" et est utilisé 
 </pre>
 
 </p>
+<h2>exemple validation dans les classes de formulaires.</h2>
+<pre>
+  <?php
+
+  namespace App\Form;
+
+  use Symfony\Vomponent\Form\AbstractType;
+  use Symfony\Compônent\Form\FormBuilderInterface;
+  use Symfony\Compônent\Validator\Constraints\Length;
+  use Symfony\Compônent\Validator\Constraints\NotBlank;
+  use Symfony\Compônent\Form\Extension\Core\Type\TextareaType;
+
+  class TskType extends AbstractType
+  {
+  public function buildForm(FormBuilderInterface $builder, array $options)
+     {
+       $builder
+          ->add('title', TextType::class, [
+             'requered' => true,
+             'constraints' => [
+                new NotBlank([
+                    'message' => 'Un titre doit etre saisi',
+                ])
+                new Length([
+                    'min' => 5,
+                    'minMessage' => 'Le titre doit contenir au moins {{ limit }} caractères',
+                    'max' => 255,
+                ])
+             ]
+          ])
+          ->add('content', textareaType::class)
+  
+     }
+  }
+</pre>
+<p>
+  dans ce coe , nous constatons la présence de ceux champs qui sont définis par les méthodes "add()": <br>
+  => title. <br>
+  => content. <br>
+  Vous remarquez d'ailleurs qu'un tableau a été ouvert dans le champ title. Il s'agit en effet d'un tableau d'options facultatif qui permet de spécifier des opyions supplémentaires pour le champ title, telle que la longueur maxiamale, la validation des données , etc, et qui peut con,tenir des contraintes de validation.
+</p>

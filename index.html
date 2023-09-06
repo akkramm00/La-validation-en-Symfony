@@ -60,8 +60,19 @@
       Grace à cet import, on peut accéder aux classe utilisant Assert. Par exemple, au lieu de devoir écrire "new Symfony\Component\Validator\Constraints\NotBlank()", on écrira "new Assert\NotBlank()". La classe "Constraints", qui utilise l'alias Assert, nous permettra ainsi d'ajouter des contraintes de validation. (voir fichier Constraints.php)
       </p>
       <h2>Les contraintes de validation  </h2>
-      p  
+      <p>
       Les contraintes de validation sont utilisées pour vérifier la validité des données entrées dans une entitédans le codre d'un formyulaire. Elles permettent de controler l'entité elle-meme ainsi que ses variables, qui sont représentées par les champs de saisie. Symfony offre de nombreuses contraintes de base, mais il est également posible d'importer des contraintes supplémentaires à partir de paquets tiers ou de créer ses propres contarintres personnalisées.
+      </p> 
+      <br>
+      <h2>Validation dans les classes de formulaires</h2>
+      <p>
+        Lorsque l'on crée une entité à l'aide de makerBundle( c-à-dire une dépendance qui aide à installer divers éléments sur des projets Symfony), celui-ci crée un formType qui sera situé dans le dossier Form. Ce formTpe contiendra un formulaire avec les champs nécessaires Toutefois, il est également possible de cxréer un formType m  nuellement. Vous pouvez alors mettre vos contraintes de validation dans ce fichier .
+      <br>
+        Ainsi, dans la méthode builForm(), les champs peuvent etre définis par la méthode add() de FormBuilderInterface. C'est d'ailleurs dans cette méthode qu'il faudra ajouter les contraintes de validation plutot que de les mettre dans l'entité. <br>
+         Pour les mettre en place , il suffit de se rendre dans le troisième parametre de la méthode add() qui est un tableau associatif ou l'on peut ajouter différentes contraintes de validation. <br>
+         voir exemple  dans "Constraints.html" .
+        
+      </p>
     </div>
   </div>
 </main>
